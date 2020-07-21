@@ -6,6 +6,29 @@
     margin: 0 auto;
 }
 
+.skip a {
+    display: block;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    top: -100px;
+}
+/* body 가 상위요소일 경우 body 엔 position 속성을 넣지 않아도 됨 */
+
+.skip a:focus { 
+    width: 100%;
+    height: auto;
+    padding: 10px 0px;
+    position: fixed;
+    top: 0px;
+    z-index: 9999999;
+}
+/* header 가 fixed 가 안되어 있으면 position: static 으로 마무리 가능하나 fixed 를 썼기때문에 z-index를 살리기 위해 position:fixed 로 바꿈 */
+
 #header {
     position: fixed;
     width: 100%;
