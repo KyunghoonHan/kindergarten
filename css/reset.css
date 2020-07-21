@@ -70,6 +70,5 @@ aside,
 nav,
 main,
 figure {
-    display: block;
+    display: block
 }
-/* 혹시라도 인식을 못하는 브라우저일 경우 시맨틱 태그들을 인라인 요소로 인식하기 때문에 display:block을 줌  */

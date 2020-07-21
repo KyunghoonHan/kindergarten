@@ -1,181 +1,9 @@
 @charset "utf-8";
 @import "reset.css";
-
-.row {
-    max-width: 1167px;
-    margin: 0 auto;
-}
-
-.skip a {
-    display: block;
-    background: #000;
-    color: #fff;
-    text-align: center;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    top: -100px;
-}
-/* body 가 상위요소일 경우 body 엔 position 속성을 넣지 않아도 됨 */
-
-.skip a:focus { 
-    width: 100%;
-    height: auto;
-    padding: 10px 0px;
-    position: fixed;
-    top: 0px;
-    z-index: 9999999;
-}
-/* header 가 fixed 가 안되어 있으면 position: static 으로 마무리 가능하나 fixed 를 썼기때문에 z-index를 살리기 위해 position:fixed 로 바꿈 */
-
-#header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 99999;
-    background: #fff;
-    box-shadow: 0px 3px 3px #eee;
-}
-
-.topmenu .row {
-    position: relative;
-}
-
-.topmenu {
-    background: #f76f6f;
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.7);
-    padding: 10px 0;
-    letter-spacing: -0.5px;
-}
-
-.topmenu a {
-    transition: all 0.5s;
-}
-
-.topmenu a:hover {
-    color: rgba(255, 255, 255, 1);
-}
-
-
-.topmenu .sns a {
-    padding-right: 10px;
-    font-size: 12.2px;
-}
-
-.topmenu .sns .a:first-child span {
-    font-size: 11px;
-}
-
-.topmenu .login {
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: #000;
-}
-
-.topmenu .login a {
-    padding-left: 10px;
-    font-size: 11px;
-}
-
-.logoNav {
-    position: relative;
-    height: 76px;
-}
-
-.logoNav h1 {
-    color: #ffae3d;
-    font-size: 26.25px;
-    line-height: 76px;
-    /* line-height 를 부모박스높이와 같은크기로 주면 세로높이가 중앙에 맞춰짐 */
-    font-weight: bold;
-}
-
-.logoNav .nav {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-
-.logoNav .nav .depth1>li {
-    display: inline-block;
-    /* 한줄로 정렬해야해서 넣어야함 */
-    font-size: 15.75px;
-    line-height: 76px;
-    padding-left: 30px;
-    font-weight: bold;
-    transition: all 0.5s;
-    position: relative;
-}
-
-.logoNav .nav .depth1>li:hover {
-    color: #ffd23c;
-}
-
-.logoNav .nav .depth1>li:first-child {
-    color: #ffd23c;
-}
-
-.logoNav .nav .depth1>li>a::after {
-    content: '\f107';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    /* font 클래스명이 fas일 경우 font-family 랑 weight는 이렇게 써야함 */
-    color: #ddd;
-    padding-left: 10px;
-}
-
-.logoNav .nav .depth1>li:first-child>a::after,
-.logoNav .nav .depth1>li:nth-child(5)>a::after {
-    visibility: hidden;
-    /* 안보이게만 하고싶을때 (자리값은 그대로 차지중) */
-    /* display: none; */
-}
-
-.logoNav .depth2 {
-    position: absolute;
-    top: 85%;
-    left: 0;
-    width: 168px;
-    /* 부모와 같은 크기로 하고싶을땐 100%로 설정 */
-    /* li 바로 밑에 나오게 하는 공식 */
-    background: #fff;
-    border-radius: 5px;
-    padding: 0 15px;
-    box-shadow: 0px 0px 15px #ddd;   /* 네방향다 그림자를 줄땐 x y 값을 0px로 주기 */
-    display: none;
-}
-
-.logoNav .depth2::before {
-    content: '';
-    position: absolute;
-    bottom: 100%;
-    left: 40px;
-    border-bottom: 10px solid #fff;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-}
-
-.logoNav .depth1 > li:hover .depth2 {
-    display: block;
-} 
-
-.logoNav .depth2>li {
-    line-height: 38px;
-    color: #ffae3d;
-}
-
-.logoNav .depth2>li:hover {
-    color: #ffd23c;
-}
-
+@import "common.css";
 
 #section {
-    padding-top: 117px;
+    padding-top: 117px
 }
 
 .slideOuter {
@@ -189,23 +17,22 @@
     top: 50%;
     transform: translateY(-50%);
     font-size: 80px;
-    color: #fff;
+    color: #fff
 }
 
 .slideOuter .prev {
-    left: 100px;
+    left: 100px
 }
 
 .slideOuter .next {
-    right: 100px;
+    right: 100px
 }
 
 .slideOuter .dotBox {
     position: absolute;
     bottom: 20px;
     left: 50%;
-    transform: translate(-50%);
-    /* x 축만 할때는 x 안써도됨 */
+    transform: translateX(-50%)
 }
 
 .slideOuter .dotBox a {
@@ -214,11 +41,10 @@
     height: 15px;
     background: #fff;
     opacity: 0.6;
-    /* 최소값 0 (안보이게함 display:none visiblity:hidden 이랑 같지만 차이점은 애니메이션을 넣을수 있다) 최대값 1 */
-    border-radius: 50%;
+    border-radius: 50%
 }
 
-.slideOuter .dotBox a:active {
+.slideOuter .dotBox a.active {
     opacity: 1;
 }
 
@@ -227,10 +53,10 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
+    position: relative
 }
 
-.slideInner>div::before {
+.slideInner>div:before {
     content: '';
     position: absolute;
     top: 0;
@@ -241,11 +67,11 @@
 }
 
 .slideInner>div:first-child {
-    background-image: url(../images/main-cover1.min.jpg);
+    background-image: url(../images/main-cover1.min.jpg)
 }
 
 .slideInner>div:last-child {
-    background-image: url(../images/main-cover2.min.jpg);
+    background-image: url(../images/main-cover2.min.jpg)
 }
 
 .slideInner>div>.text {
@@ -255,9 +81,10 @@
     transform: translate(-50%, -50%);
     text-align: center;
     color: #fff;
+    /* z-index:9999; */
 }
 
-.slideInner .text>p:nth-child(1) {
+.slideInner .text>p:first-child {
     font-size: 70px;
     text-shadow: -3px 3px 5px rgba(0, 0, 0, 0.5);
 }
@@ -265,7 +92,7 @@
 .slideInner .text>p:nth-child(2) {
     font-size: 19.25px;
     text-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
-    margin: 20px 0px 30px;
+    margin: 20px 0px 30px
 }
 
 .slideInner .text>p:nth-child(3)>a {
@@ -277,31 +104,31 @@
 
 .slideInner .text>p:nth-child(3)>a:nth-child(1) {
     color: #fff;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5)
 }
 
 .slideInner .text>p:nth-child(3)>a:nth-child(2) {
     color: #000;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.5)
 }
 
 .slideInner .text>p:nth-child(3)>a:nth-child(1):hover {
-    background: #ffd23c;
+    background: #ffd23c
 }
 
 .slideInner .text>p:nth-child(3)>a:nth-child(2):hover {
-    color: #fff;
+    color: #fff
 }
 
 #section .title h2 {
     font-size: 28px;
     color: #222;
     margin: 20px 0 20px;
-    text-align: center;
     font-weight: bold;
+    text-align: center
 }
 
-#section .title>p {
+#section .title p {
     font-size: 14px;
     color: #333;
     margin-bottom: 56px;
@@ -310,7 +137,7 @@
     position: relative;
 }
 
-#section .title>p::after {
+#section .title p:after {
     content: '';
     width: 100px;
     height: 2px;
@@ -322,11 +149,11 @@
 }
 
 #section .title p strong {
-    font-weight: bold;
+    font-weight: bold
 }
 
 .act {
-    padding: 80px 0;
+    padding: 80px 0
 }
 
 .act ul li {
@@ -336,8 +163,63 @@
     background-repeat: no-repeat;
     height: 186px;
     margin: 0 0.5%;
-    background-position: left top;
-    position: relative;
+    position: relative
+}
+
+.act ul li:nth-child(1) {
+    background-image: url(../images/main-business1.min.jpg);
+}
+
+.act ul li:nth-child(1):before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(48, 120, 210, 0.5);
+}
+
+.act ul li:nth-child(2) {
+    background-image: url(../images/main-business2.min.jpg)
+}
+
+.act ul li:nth-child(2):before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 174, 61, 0.6);
+}
+
+.act ul li:nth-child(3) {
+    background-image: url(../images/main-business3.min.jpg)
+}
+
+.act ul li:nth-child(3):before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(48, 205, 210, 0.5);
+}
+
+.act ul li:nth-child(4) {
+    background-image: url(../images/main-business4.min.jpg)
+}
+
+.act ul li:nth-child(4):before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(247, 111, 111, 0.5);
 }
 
 .act ul li div {
@@ -352,90 +234,34 @@
 .act ul li div h3 {
     margin: 10px 0;
     font-size: 19.25px;
-    font-weight: bold;
+    font-weight: bold
 }
 
-.act ul div p {
+.act ul li div p {
     font-size: 14px;
     margin: 15px 0;
-    line-height: 1.5;
+    line-height: 1.5
 }
 
 .act ul li div a {
     padding: 5px 20px;
-    font-size: 0.750em;
+    font-size: 12px;
     line-height: 1.5;
     border-radius: 3px;
     color: #f8f9fa;
     border: 1px solid #f8f9fa;
     letter-spacing: 0.5px;
     transition: all 0.5s;
-    /* 모든 변화의 진행시간이 걸리는 시간 지정하기 ex hover */
 }
 
 .act ul li div a:hover {
     color: #212529;
-    background: #f8f9fa;
+    background-color: #f8f9fa
 }
 
-.act ul li:nth-child(1) {
-    background-image: url(../images/main-business1.min.jpg);
-}
-
-.act ul li:nth-child(1)::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(48, 120, 210, 0.5);
-}
-
-.act ul li:nth-child(2) {
-    background-image: url(../images/main-business2.min.jpg);
-}
-
-.act ul li:nth-child(2)::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 174, 61, 0.6);
-}
-
-.act ul li:nth-child(3) {
-    background-image: url(../images/main-business3.min.jpg);
-}
-
-.act ul li:nth-child(3)::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(48, 205, 210, 0.5);
-}
-
-.act ul li:nth-child(4) {
-    background-image: url(../images/main-business4.min.jpg);
-}
-
-.act ul li:nth-child(4)::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(247, 111, 111, 0.5);
-}
 
 .curriInfo {
-    padding: 84px 0;
+    padding: 84px 0
 }
 
 .curriBox>.column {
@@ -445,34 +271,30 @@
 
 .curriBox>.column:nth-child(2) {
     margin: 0 2.5%;
-    /* 넓이 값을 퍼센트로 줬을땐 마진값도 퍼센트로 줘야함 */
+}
+
+.curriBox>.column:first-child>div:first-child,
+.curriBox>.column:nth-child(3)>div:first-child {
+    margin-bottom: 15.5px
 }
 
 .curriBox>.column>div {
     position: relative;
 }
 
-.curriBox>.column:first-child>div:first-child,
-.curriBox>.column:nth-child(3)>div:first-child {
-    margin-bottom: 15.5px;
-}
-
 .curriBox .overlay {
-    overflow: hidden;
     position: absolute;
+    overflow: hidden;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background: -webkit-linear-gradient(left, #ffd23c, #ffae3d);
-    /* 웹킷만 시작지점 지정 */
     background: -moz-linear-gradient(right, #ffd23c, #ffae3d);
-    /* 브라우저마다 접두어가 필요 */
     background: -o-linear-gradient(right, #ffd23c, #ffae3d);
-    /* 접두어가 붙어서 to를 뺌 */
     background: linear-gradient(to right, #ffd23c, #ffae3d);
     opacity: 0;
-    transition: all 0.5s;
+    transition: all 0.5s
 }
 
 .curriBox .column>div:hover .overlay {
@@ -485,7 +307,7 @@
     left: 20px;
     right: 20px;
     color: #fff;
-    transition: all 0.5s;
+    transition: all 0.5s
 }
 
 .curriBox .column>div:hover .copy {
@@ -494,19 +316,21 @@
 
 .curriBox .copy h3 {
     font-size: 24.5px;
-    font-weight: bold;
+    font-weight: bold
 }
 
 .curriBox .copy p {
-    font-size: 14px;
-    margin: 10px 0;
-    line-height: 1.5;
     font-weight: bold;
+    font-size: 14px;
+    margin: 15px 0;
+    line-height: 1.5
 }
+
+
 
 .review {
     background: #fdeace;
-    padding: 84px 0;
+    padding: 84px 0
 }
 
 .review ul li {
@@ -515,11 +339,11 @@
 }
 
 .review ul li:nth-child(2) {
-    margin: 0 2.5%;
+    margin: 0 2.5%
 }
 
 .review ul li>div {
-    position: relative;
+    position: relative
 }
 
 .review .quote {
@@ -534,7 +358,7 @@
     position: absolute;
     top: -28px;
     left: 10px;
-    z-index: 99999;
+    z-index: 99999
 }
 
 .review .blockQuote {
@@ -548,23 +372,21 @@
     margin-bottom: 20px;
 }
 
-.review .blockQuote::after {
+.review .blockQuote:after {
     content: '';
     position: absolute;
     top: 100%;
-    /* 정확하게 부모높이 바로 아래에 위치하려면 top 100% 를 주면됨 (다른쪽도 마찬가지) */
     left: 40px;
     border-top: 15px solid #fff;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    /* 반대방향은 안써도 되나 나머지 두방향은 색상을 transparent로 넣어서 둬야 삼각형이 만들어짐 */
 }
 
 .review .client {
     padding: 0 20px;
     font-size: 20px;
     font-weight: bold;
-    letter-spacing: -1px;
+    letter-spacing: -1px
 }
 
 .review .client p:nth-child(1) {
@@ -572,25 +394,26 @@
 }
 
 .review .client a {
-    color: #f76f6f;
+    color: #f76f6f
 }
 
 .review .client p:nth-child(2) {
-    color: #fff;
+    color: #fff
 }
+
 
 .bestChoice {
     background: url(../images/main-bottomBanner.min.jpg) no-repeat;
-    height: 160px;
     background-size: cover;
+    height: 160px;
+    line-height: 160px;
     background-attachment: fixed;
     background-position: center;
     font-size: 19.25px;
     color: #fff;
     text-align: center;
-    line-height: 160px;
     font-weight: bold;
-    position: relative;
+    position: relative
 }
 
 .bestChoice .overlay {
@@ -599,13 +422,13 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3)
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .csNnotice {
     background: #f5f5f5;
     padding: 84px 0;
-    color: #333;
+    color: #333
 }
 
 .csNnotice>.row>div {
@@ -614,7 +437,7 @@
 }
 
 .csNnotice>.row>div:nth-child(2) {
-    margin: 0 2.5%;
+    margin: 0 2.5%
 }
 
 .csNnotice h2 {
@@ -627,21 +450,21 @@
     margin-bottom: 10px;
 }
 
-.csNnotice .csCenter p:nth-child(1),
-.csNnotice .csCenter p:nth-child(2) {
+.csNnotice .cscenter p:nth-child(1),
+.csNnotice .cscenter p:nth-child(2) {
     font-size: 19.25px;
     font-weight: bold;
 }
 
-.csNnotice .csCenter p:nth-child(3),
-.csNnotice .csCenter p:nth-child(4) {
+.csNnotice .cscenter p:nth-child(3),
+.csNnotice .cscenter p:nth-child(4) {
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.5
 }
 
 .csNnotice .consult {
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.5
 }
 
 .csNnotice .consult a {
@@ -652,103 +475,39 @@
     width: 133px;
     text-align: center;
     margin-top: 10px;
-    border-radius: 4px;
+    border-radius: 4px
 }
 
 .csNnotice .notice li {
-    padding: 2px;
+    padding: 2px
 }
 
 .csNnotice .notice a {
     font-size: 14px;
 }
 
-.csNnotice .notice a::before {
-    content: 'ㆍ';
+.csNnotice .notice a:before {
+    content: 'ㆍ'
 }
 
-.csNnotice .notice a::after {
-    content: 'NEW';
+.csNnotice .notice a:after {
+    content: ' NEW';
     font-size: 10px;
     color: #ff0;
-    font-weight: bold;
+    font-weight: bold
 }
 
-.csNnotice .more {
+.csNnotice .notice+.more {
     position: absolute;
+    top: 0;
+    right: 0;
     padding: 5px 10px;
     color: #fff;
     background: rgba(0, 0, 0, 0.5);
-    top: 0;
-    right: 0;
     font-size: 12px;
     border-radius: 4px;
 }
 
-.csNnotice .row div:nth-child(3) {
+.csNnotice .row>div:nth-child(3) {
     position: relative;
-}
-
-#footer {
-    text-align: center;
-    font-size: 12.25px;
-}
-
-.footerMenu {
-    background: #eee;
-    color: #333;
-    padding: 10px;
-}
-
-.footerMenu a {
-    padding-left: 11px;
-}
-
-.footerMenu a::before {
-    content: '|';
-    padding-right: 11px;
-    font-size: 6px;
-    position: relative;
-    top: -1px;
-}
-
-.footerMenu a:first-child::before {
-    display: none;
-}
-
-.comInfo {
-    background: #222;
-    color: rgba(255, 255, 255, 0.5);
-    padding: 40px 0;
-}
-
-.comInfo .sns a {
-    font-size: 17px;
-    padding: 0px 10px 20px;
-    display: inline-block;
-    /* 패딩 상하 여백이 안들어갈때는 블락성격을 추가해주자 */
-}
-
-.comInfo .info span {
-    letter-spacing: -1px;
-    padding-left: 7px;
-}
-
-.comInfo .info span::before {
-    content: '|';
-    padding-right: 5px;
-    font-size: 6px;
-    position: ;
-    top: 1px;
-}
-
-.comInfo .info span:first-child::before {
-    display: none;
-}
-
-.copyright {
-    background: #0a0a0a;
-    font-size: 10.5px;
-    color: #333;
-    padding: 10px 0;
 }
