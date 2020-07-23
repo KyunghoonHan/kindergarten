@@ -1,2 +1,2 @@
 # kindergarten
- https://kyunghoonhan.github.io/kindergarten/
+ https://bin8639.github.io/kindergarten/
