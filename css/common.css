@@ -31,13 +31,13 @@
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 99999;
     background: #fff;
-    box-shadow: 0px 3px 3px #eee
+    box-shadow: 0px 3px 3px #eee;
+    z-index: 99999;
 }
 
 .topmenu .row {
-    position: relative
+    position: relative;
 }
 
 .topmenu {
@@ -105,6 +105,10 @@
 }
 
 .logoNav .nav .depth1>li:hover {
+    color: #ffd23c;
+}
+
+.logoNav .nav .depth1>li:hover .depth2>li:hover {
     color: #ffd23c;
 }
 
