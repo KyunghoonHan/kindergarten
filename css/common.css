@@ -47,6 +47,10 @@
     letter-spacing: -0.5px;
 }
 
+.topmenu .search_box {
+    
+}
+
 .topmenu a {
     transition: all 0.5s;
 }
