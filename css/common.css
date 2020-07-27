@@ -49,8 +49,8 @@
 
 .topmenu .search_box {
     position: absolute;
-    top: 7px;
-    right: 100px;
+    top: 0;
+    left: 150px;
     background: #fff;
     border-radius: 5px;
 }
