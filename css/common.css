@@ -64,12 +64,14 @@
 .topmenu .search_box input {
     border: none;
     padding: 4px 0.5em;
+    outline: none;
 }
 
 .topmenu .search_box button {
     background: #fff;
     border: none;
     cursor: pointer;
+    color: #f76f6f;
 }
 
 .topmenu a {
