@@ -117,6 +117,14 @@
     line-height: 15.75px;
 }
 
+.logoNav .open_nav {
+    display: none;
+}
+
+.logoNav .close_nav {
+    display: none;
+}
+
 .logoNav .nav {
     position: absolute;
     top: 0;

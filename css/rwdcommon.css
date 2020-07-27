@@ -1,25 +1,27 @@
 @charset "utf-8";
 
 
-@media only screen and ( max-width:1170px ) {
+@media only screen and (max-width:1170px) {
     .row {
         padding: 0 10px;
     }
+
     .topmenu .login {
         position: absolute;
         top: 0;
         right: 10px;
         color: #000;
     }
-    
+
 }
 
-@media only screen and ( max-width: 992px ) {
+@media only screen and (max-width: 992px) {
     .logoNav {
         position: relative;
         height: auto;
         background: #fff;
     }
+
     .logoNav h1 {
         color: #ffae3d;
         font-size: 26.25px;
@@ -27,15 +29,17 @@
         font-weight: bold;
         text-align: center;
     }
+
     .logoNav .nav {
-        position: static;    /* absolute 를 취소 시킬때 static */
+        position: static;
+        /* absolute 를 취소 시킬때 static */
         top: 0;
         right: 0;
         text-align: center;
     }
 }
 
-@media only screen and ( max-width: 841px ) {
+@media only screen and (max-width: 841px) {
     .topmenu .login {
         position: absolute;
         top: 0;
@@ -43,6 +47,7 @@
         color: #000;
         display: none;
     }
+
     .topmenu .search_box {
         position: absolute;
         top: 0;
@@ -51,6 +56,7 @@
         background: #fff;
         border-radius: 5px;
     }
+
     .logoNav h1 {
         color: #ffae3d;
         font-size: 26.25px;
@@ -58,8 +64,27 @@
         font-weight: bold;
         text-align: center;
     }
+
+    .logoNav .open_nav {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        font-size: 25px;
+        transform: translateY(-50%);
+    }
+
+    .logoNav .close_nav {
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        font-size: 25px;
+        transform: translateY(-50%);
+    }
+
     .logoNav .nav {
-        position: static; 
+        position: static;
         top: 0;
         right: 0;
         text-align: center;
