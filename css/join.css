@@ -75,6 +75,29 @@
     vertical-align: top;
 }
 
+.join_form .info_content select  {
+    appearance: none;
+    background: transparent;
+}
+
+.join_form .info_content select::-ms-expand {
+    display: none;
+}
+
+.join_form .info_content .email_box {
+    position: relative;
+}
+
+.join_form .info_content .email_box::after {
+    content: '\f0dd';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: red;
+    position: relative;
+    top : -3px;
+    right: 25px;
+}
+
 .join_form .w320 {
     width: 320px;
 }
@@ -107,11 +130,52 @@
     background: #ddd;
 }
 
-.join_form .gender_area label, 
+.join_form .gender_area label {
+    line-height: 40px;
+    padding-right: 15px;
+}
+
+.join_form .gender_area label::before {
+    content: '\f058';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+    color: #ddd;
+    padding-right: 8px;
+}
+
+.join_form .gender_area input[type=radio]:checked + label::before {
+    font-weight: 900;
+    color: #f00;
+}
+
 .join_form .hobby_area label {
     line-height: 40px;
     padding-right: 15px;
 }
+
+.join_form .hobby_area label::before {
+    content: '\f14a';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+    color: #ddd;
+    padding-right: 8px;
+    display: inline-block;
+    transform: scale(1.5);
+}
+
+.join_form .hobby_area input[type=checkbox]:checked + label::before {
+    font-weight: 900;
+    color: #f00;
+}
+
+.join_form .gender_area input[type=radio] {
+    display: none;
+} 
+
+.join_form .hobby_area input[type=checkbox] {
+    display: none;
+} 
+
 
 .join_form .info_content textarea {
     width: 70%;
