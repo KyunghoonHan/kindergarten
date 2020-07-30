@@ -78,6 +78,8 @@
 .join_form .info_content select  {
     appearance: none;
     background: transparent;
+    z-index: 999;
+    position: relative;
 }
 
 .join_form .info_content select::-ms-expand {
